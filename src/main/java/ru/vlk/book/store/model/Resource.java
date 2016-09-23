@@ -1,4 +1,4 @@
-package ru.vlk.resource.cloud.model;
+package ru.vlk.book.store.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;

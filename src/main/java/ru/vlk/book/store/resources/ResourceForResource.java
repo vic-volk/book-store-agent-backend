@@ -1,9 +1,9 @@
-package ru.vlk.resource.cloud.resources;
+package ru.vlk.book.store.resources;
 
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
-import ru.vlk.resource.cloud.model.Resource;
-import ru.vlk.resource.cloud.service.ResourceService;
+import ru.vlk.book.store.model.Resource;
+import ru.vlk.book.store.service.ResourceService;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;

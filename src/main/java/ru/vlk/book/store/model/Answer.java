@@ -1,4 +1,4 @@
-package ru.vlk.resource.cloud.model;
+package ru.vlk.book.store.model;
 
 import java.util.Date;
 import java.util.Map;

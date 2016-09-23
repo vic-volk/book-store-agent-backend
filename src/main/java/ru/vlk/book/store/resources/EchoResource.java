@@ -1,7 +1,7 @@
-package ru.vlk.resource.cloud.resources;
+package ru.vlk.book.store.resources;
 
 import org.springframework.stereotype.Component;
-import ru.vlk.resource.cloud.service.EchoService;
+import ru.vlk.book.store.service.EchoService;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
