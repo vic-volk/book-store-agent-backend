@@ -1,4 +1,4 @@
-package ru.vlk.book.store;
+package ru.vlk.book.store.rest;
 
 import com.sun.net.httpserver.HttpServer;
 import org.elasticsearch.common.settings.Settings;
@@ -16,11 +16,11 @@ import javax.ws.rs.core.UriBuilder;
 import java.net.URI;
 
 @Configuration
-@EnableElasticsearchRepositories(basePackages = "ru.vlk.book.store.repository")
+@EnableElasticsearchRepositories(basePackages = "ru.vlk.book.store.rest.repository")
 public class Application extends ResourceConfig {
 
     public Application() {
-        packages("ru.vlk.book.store.resources");
+        packages("ru.vlk.book.store.rest.resources");
         property("contextConfigLocation", "classpath:META-INF/applicationContext.xml");
         register(JacksonFeature.class);
     }

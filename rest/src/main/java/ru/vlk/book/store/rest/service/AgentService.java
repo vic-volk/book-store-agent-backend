@@ -1,4 +1,4 @@
-package ru.vlk.book.store.service;
+package ru.vlk.book.store.rest.service;
 
 import org.springframework.stereotype.Service;
 

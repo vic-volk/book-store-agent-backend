@@ -1,10 +1,10 @@
-package ru.vlk.book.store.service;
+package ru.vlk.book.store.rest.service;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Component;
-import ru.vlk.book.store.repository.ResourceRepository;
-import ru.vlk.book.store.model.Resource;
+import ru.vlk.book.store.rest.repository.ResourceRepository;
+import ru.vlk.book.store.rest.model.Resource;
 
 import javax.inject.Inject;
 
