@@ -10,7 +10,7 @@ public class Book {
     private String id;
     private String name;
     private String author;
-    private String cathegory;
+    private String category;
     private String year;
     private String cover;
     private String cost;
@@ -39,12 +39,12 @@ public class Book {
         this.author = author;
     }
 
-    public String getCathegory() {
-        return cathegory;
+    public String getCategory() {
+        return category;
     }
 
-    public void setCathegory(String cathegory) {
-        this.cathegory = cathegory;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public String getYear() {
