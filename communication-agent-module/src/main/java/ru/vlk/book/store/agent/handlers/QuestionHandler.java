@@ -1,9 +1,13 @@
 package ru.vlk.book.store.agent.handlers;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Component;
 import ru.vlk.book.store.agent.exception.AgentException;
 import ru.vlk.book.store.agent.model.QuestionType;
 import ru.vlk.book.store.agent.service.AgentMemoryService;
+import ru.vlk.book.store.elastic.model.Book;
+import ru.vlk.book.store.elastic.repository.BookRepository;
 
 import javax.inject.Inject;
 import java.util.HashMap;
@@ -15,14 +19,10 @@ public class QuestionHandler implements Runnable {
     @Inject
     private AgentMemoryService agentMemoryService;
 
+    @Inject
+    private BookRepository bookRepository;
+
     private String question;
-
-    public QuestionHandler() {
-    }
-
-    public QuestionHandler(String question) {
-        this.question = question;
-    }
 
     @Override
     public void run() {
@@ -33,9 +33,9 @@ public class QuestionHandler implements Runnable {
             Map.Entry<QuestionType, String> questionType = retrieveQuestionType(question);
             try {
                 //произвести поиск
-                searchByType(questionType);
+                Page<Book> results = searchByType(questionType);
                 //выставить результаты
-                agentMemoryService.setResults();
+                agentMemoryService.setBookResults(results);
             } catch (AgentException e) {
                 System.out.println(e.getMessage());
                 e.printStackTrace();
@@ -56,20 +56,20 @@ public class QuestionHandler implements Runnable {
         return map.entrySet().iterator().next();
     }
 
-    private void searchByType(Map.Entry<QuestionType, String> questionType) throws AgentException {
+    private Page<Book> searchByType(Map.Entry<QuestionType, String> questionType) throws AgentException {
         switch (questionType.getKey()) {
-            case Concrete: searchByConcrete(questionType.getValue()); break;
-            case Category: searchByCategory(questionType.getValue()); break;
+            case Concrete: return searchByConcrete(questionType.getValue());
+            case Category: return searchByCategory(questionType.getValue());
             default: throw new AgentException("ERROR: Unrecognized question category.");
         }
     }
 
-    private void searchByConcrete(String questionTerm) {
-
+    private Page<Book> searchByConcrete(String questionTerm) {
+        return bookRepository.findAll(new PageRequest(0, 10));
     }
 
-    private void searchByCategory(String questionTerm) {
-
+    private Page<Book> searchByCategory(String questionTerm) {
+        return bookRepository.findAll(new PageRequest(0, 10));
     }
 
     private String returnMisunderstandingPhrase() {

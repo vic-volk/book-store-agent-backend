@@ -1,8 +1,10 @@
 package ru.vlk.book.store.rest.resources;
 
 import org.apache.commons.lang.StringUtils;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
 import ru.vlk.book.store.agent.service.AgentService;
+import ru.vlk.book.store.elastic.model.Book;
 import ru.vlk.book.store.rest.model.Answer;
 
 import javax.inject.Inject;
@@ -17,10 +19,8 @@ public class AgentResource {
 
     @GET
     @Produces("application/json")
-    public Answer getAnswer() {
-        Answer answer = new Answer();
-        answer.setText(agentService.getCurrentQuestion().getMessage());
-        return answer;
+    public Page<Book> getAnswer() {
+        return agentService.getBookResults();
     }
 
     @POST
@@ -29,5 +29,4 @@ public class AgentResource {
         agentService.handleQuestion(question);
         return "in handle";
     }
-
 }

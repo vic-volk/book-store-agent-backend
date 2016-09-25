@@ -7,4 +7,6 @@
 
     <context:component-scan base-package="ru.vlk.book.store.agent"/>
 
+    <import resource="applicationContext-elasticsearch.xml"/>
+
 </beans>
