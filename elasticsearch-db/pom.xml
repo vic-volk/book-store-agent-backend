@@ -10,15 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>book.store</groupId>
-    <artifactId>communication-agent-module</artifactId>
-
-    <dependencies>
-        <dependency>
-            <groupId>book.store</groupId>
-            <artifactId>elasticsearch-db</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
+    <artifactId>elasticsearch-db</artifactId>
 
 
 </project>
