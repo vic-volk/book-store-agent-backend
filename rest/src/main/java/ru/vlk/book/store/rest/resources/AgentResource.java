@@ -2,7 +2,7 @@ package ru.vlk.book.store.rest.resources;
 
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Component;
-import ru.vlk.book.store.rest.service.AgentService;
+import ru.vlk.book.store.agent.service.AgentService;
 import ru.vlk.book.store.rest.model.Answer;
 
 import javax.inject.Inject;
@@ -19,15 +19,14 @@ public class AgentResource {
     @Produces("application/json")
     public Answer getAnswer() {
         Answer answer = new Answer();
-        answer.setText("answer");
-        answer.setMessages(agentService.getMessages());
+        answer.setText(agentService.getCurrentQuestion().getMessage());
         return answer;
     }
 
     @POST
-    public String handleQuestion(@QueryParam("question-text") String question) {
+    public String pushQuestion(@QueryParam("question-text") String question) {
         question = StringUtils.isBlank(question) ? "" : question;
-        agentService.rememberMessage(question);
+        agentService.handleQuestion(question);
         return "in handle";
     }
 
