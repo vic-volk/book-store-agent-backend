@@ -1,17 +1,18 @@
 package ru.vlk.book.store.agent.handlers;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Component;
 import ru.vlk.book.store.agent.exception.AgentException;
+import ru.vlk.book.store.agent.lingvistic.CategoryResolver;
+import ru.vlk.book.store.agent.lingvistic.QuestionConverter;
 import ru.vlk.book.store.agent.model.QuestionType;
 import ru.vlk.book.store.agent.service.AgentMemoryService;
 import ru.vlk.book.store.elastic.model.Book;
 import ru.vlk.book.store.elastic.repository.BookRepository;
 
 import javax.inject.Inject;
-import java.util.HashMap;
-import java.util.Map;
 
 @Component
 public class QuestionHandler implements Runnable {
@@ -22,6 +23,14 @@ public class QuestionHandler implements Runnable {
     @Inject
     private BookRepository bookRepository;
 
+    @Inject
+    @Qualifier("ontologyCategoryResolver")
+    private CategoryResolver categoryResolver;
+
+    @Inject
+    @Qualifier("ontologyQuestionConverter")
+    private QuestionConverter questionConverter;
+
     private String question;
 
     @Override
@@ -30,10 +39,11 @@ public class QuestionHandler implements Runnable {
         //определить тип вопроса на основе вопросительных конструкций
         if (isQuestionPhrase(question)) {
             //извлечь название категории или книги
-            Map.Entry<QuestionType, String> questionType = retrieveQuestionType(question);
+            QuestionType questionType = retrieveQuestionType(question);
+            String query = questionConverter.questionToQuery(question);
             try {
                 //произвести поиск
-                Page<Book> results = searchByType(questionType);
+                Page<Book> results = searchByType(questionType, query);
                 //выставить результаты
                 agentMemoryService.setBookResults(results);
             } catch (AgentException e) {
@@ -46,20 +56,26 @@ public class QuestionHandler implements Runnable {
         }
     }
 
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
     private boolean isQuestionPhrase(String message) {
-        return message.contains("do you have");
+        return categoryResolver.isQuestion(message);
     }
 
-    private Map.Entry<QuestionType, String> retrieveQuestionType(String message) {
-        HashMap<QuestionType, String> map = new HashMap<>();
-        map.put(QuestionType.Concrete, message);
-        return map.entrySet().iterator().next();
+    private QuestionType retrieveQuestionType(String message) {
+        return categoryResolver.resolveQuestionType(message);
     }
 
-    private Page<Book> searchByType(Map.Entry<QuestionType, String> questionType) throws AgentException {
-        switch (questionType.getKey()) {
-            case Concrete: return searchByConcrete(questionType.getValue());
-            case Category: return searchByCategory(questionType.getValue());
+    private Page<Book> searchByType(QuestionType type, String query) throws AgentException {
+        switch (type) {
+            case Concrete: return searchByConcrete(query);
+            case Category: return searchByCategory(query);
             default: throw new AgentException("ERROR: Unrecognized question category.");
         }
     }
@@ -74,13 +90,5 @@ public class QuestionHandler implements Runnable {
 
     private String returnMisunderstandingPhrase() {
         return "Could you repeat question?";
-    }
-
-    public String getQuestion() {
-        return question;
-    }
-
-    public void setQuestion(String question) {
-        this.question = question;
     }
 }
