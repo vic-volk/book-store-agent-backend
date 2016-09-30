@@ -1,4 +1,4 @@
-package ru.vlk.book.store.agent.lingvistic;
+package ru.vlk.book.store.agent.test.lingvistic;
 
 import org.springframework.stereotype.Component;
 

@@ -1,8 +1,7 @@
-package ru.vlk.book.store.agent.lingvistic;
+package ru.vlk.book.store.agent.test.lingvistic;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
-import ru.vlk.book.store.agent.model.QuestionType;
+import ru.vlk.book.store.agent.test.model.QuestionType;
 
 @Component
 public interface CategoryResolver {

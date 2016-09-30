@@ -1,10 +1,10 @@
-package ru.vlk.book.store.agent.service;
+package ru.vlk.book.store.agent.test.service;
 
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
-import ru.vlk.book.store.agent.handlers.QuestionHandler;
-import ru.vlk.book.store.agent.handlers.QuestionHandlerFactory;
-import ru.vlk.book.store.agent.model.Question;
+import ru.vlk.book.store.agent.test.handlers.QuestionHandler;
+import ru.vlk.book.store.agent.test.handlers.QuestionHandlerFactory;
+import ru.vlk.book.store.agent.test.model.Question;
 import ru.vlk.book.store.elastic.model.Book;
 
 import javax.annotation.PostConstruct;

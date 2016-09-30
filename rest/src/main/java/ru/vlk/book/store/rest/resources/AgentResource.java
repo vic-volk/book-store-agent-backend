@@ -3,9 +3,8 @@ package ru.vlk.book.store.rest.resources;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
-import ru.vlk.book.store.agent.service.AgentService;
+import ru.vlk.book.store.agent.test.service.AgentService;
 import ru.vlk.book.store.elastic.model.Book;
-import ru.vlk.book.store.rest.model.Answer;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;

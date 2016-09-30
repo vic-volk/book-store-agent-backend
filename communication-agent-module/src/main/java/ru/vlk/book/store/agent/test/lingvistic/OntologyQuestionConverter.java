@@ -1,7 +1,7 @@
-package ru.vlk.book.store.agent.lingvistic;
+package ru.vlk.book.store.agent.test.lingvistic;
 
 import org.springframework.stereotype.Component;
-import ru.vlk.book.store.agent.service.AgentMemoryService;
+import ru.vlk.book.store.agent.test.service.AgentMemoryService;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;

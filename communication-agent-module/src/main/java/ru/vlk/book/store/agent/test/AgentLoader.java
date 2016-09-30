@@ -1,4 +1,4 @@
-package ru.vlk.book.store.agent;
+package ru.vlk.book.store.agent.test;
 
 import org.springframework.stereotype.Component;
 
@@ -9,7 +9,7 @@ import java.util.concurrent.ForkJoinPool;
 @Component
 public class AgentLoader {
 
-    Executor executor = new ForkJoinPool();
+    private Executor executor = new ForkJoinPool();
 
     @PostConstruct
     public void init() {
