@@ -16,6 +16,9 @@ import ru.vlk.book.store.elastic.repository.BookRepository;
 
 import javax.inject.Inject;
 
+import static junit.framework.TestCase.assertFalse;
+import static junit.framework.TestCase.assertTrue;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @Component
 @ContextConfiguration("classpath*:META-INF/test-applicationContext-communication-agent.xml")
@@ -49,6 +52,9 @@ public class OntologyCategoryResolverTest {
 
     @Test
     public void testIsQuestion() {
-        categoryResolver.isQuestion("do you have");
+        assertTrue(categoryResolver.isQuestion("do you have books about math"));
+        assertTrue(categoryResolver.isQuestion("is there any book about Monte Christo?"));
+
+        assertFalse(categoryResolver.isQuestion("who are you?"));
     }
 }
