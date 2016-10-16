@@ -1,9 +1,7 @@
 package ru.vlk.book.store.agent.test.service;
 
-import com.google.common.collect.Multimap;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;
-import org.semanticweb.owlapi.search.EntitySearcher;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -16,11 +14,9 @@ import java.io.File;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
+
+import static ru.vlk.book.store.agent.test.util.OWLUtils.*;
 
 @Component
 public class AgentMemoryService {
@@ -29,6 +25,8 @@ public class AgentMemoryService {
     private String ontologyFilePath;
 
     private Set<String> questionPatterns;
+
+    private Set<String> categoryQuestionWords;
 
     private OWLOntology ontology;
 
@@ -39,6 +37,7 @@ public class AgentMemoryService {
         bookResults = new PageImpl<>(new ArrayList<>());
         this.ontology = loadOntology();
         this.questionPatterns = loadQuestionPatterns(ontology);
+        this.categoryQuestionWords = loadCategoryQuestionWords(ontology);
     }
 
     public void setBookResults(Page<Book> bookResults) {
@@ -49,16 +48,12 @@ public class AgentMemoryService {
         return this.bookResults;
     }
 
-    public OWLOntology getOntology() {
-        return ontology;
-    }
-
     public Set<String> getQuestionPatterns() {
         return questionPatterns;
     }
 
-    public void setQuestionPatterns(Set<String> questionPatterns) {
-        this.questionPatterns = questionPatterns;
+    public Set<String> getCategoryQuestionWords() {
+        return categoryQuestionWords;
     }
 
     private OWLOntology loadOntology() throws AgentException {
@@ -78,33 +73,16 @@ public class AgentMemoryService {
     }
 
     private Set<String> loadQuestionPatterns(OWLOntology ontology) {
-        Set<OWLClass> classes = ontology.classesInSignature().collect(Collectors.toSet());
-        OWLClass questionPatternClass = classes.stream()
-                .filter(cl -> classNameEquals(cl, "QuestionPattern", ontology)).findFirst().get();
-        Set<OWLIndividual> individuals = EntitySearcher.getIndividuals(questionPatternClass, ontology)
-                .collect(Collectors.toSet());
-        return getPatternValues(individuals, ontology);
+        return getValuesOfClassIndividuals("QuestionPattern", ontology);
     }
 
-    private boolean classNameEquals(OWLClass owlClass, String name, OWLOntology owlOntology) {
-        Set<OWLAnnotation> annotations = EntitySearcher.getAnnotations(owlClass, owlOntology)
-                .filter(a -> a.getValue().asLiteral().get().getLiteral().equals(name))
-                .collect(Collectors.toSet());
-        if (annotations.size() == 0) {
-            return false;
-        }
-        return annotations.iterator().next() != null;
+    private Set<String> loadCategoryQuestionWords(OWLOntology ontology) {
+        return getValuesOfClassIndividuals("CategoryQuestionPattern", ontology);
     }
 
-    private Set<String> getPatternValues(Set<OWLIndividual> individuals, OWLOntology ontology) {
-        Set<String> values = new HashSet<>();
-        individuals.forEach(i -> {
-            Multimap<OWLDataPropertyExpression, OWLLiteral> propertiesForIndividual =
-                    EntitySearcher.getDataPropertyValues(i, ontology);
-            propertiesForIndividual.asMap().values().forEach(
-                    v -> v.forEach(val ->
-                            values.add(val.getLiteral())));
-        });
-        return values;
+    private Set<String> getValuesOfClassIndividuals(String name, OWLOntology ontology) {
+        OWLClass owlClass = getOWLClass(name, ontology);
+        Set<OWLIndividual> individuals = getClassIndividuals(owlClass, ontology);
+        return getIndividualValues(individuals, ontology);
     }
 }
