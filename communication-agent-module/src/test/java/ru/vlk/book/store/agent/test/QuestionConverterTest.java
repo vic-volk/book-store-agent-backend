@@ -2,6 +2,7 @@ package ru.vlk.book.store.agent.test;
 
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.node.NodeBuilder;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
@@ -10,6 +11,9 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
 import org.springframework.stereotype.Component;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import ru.vlk.book.store.agent.test.lingvistic.QuestionConverter;
+
+import javax.inject.Inject;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @Component
@@ -36,5 +40,11 @@ public class QuestionConverterTest {
                 .client());
     }
 
+    @Inject
+    private QuestionConverter questionConverter;
 
+    @Test
+    public void testQuestionToQuery() {
+        System.out.println(questionConverter.questionToQuery("do you have math book?"));
+    }
 }
