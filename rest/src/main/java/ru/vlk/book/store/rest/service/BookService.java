@@ -1,6 +1,5 @@
 package ru.vlk.book.store.rest.service;
 
-import org.jvnet.hk2.annotations.Service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Component;
