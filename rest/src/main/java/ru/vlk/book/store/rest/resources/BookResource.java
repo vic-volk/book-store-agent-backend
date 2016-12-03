@@ -26,6 +26,8 @@ public class BookResource {
 
     @POST
     public void indexSample() {
-        bookService.indexSampleBook();
+        bookService.indexHobbit();
+        bookService.indexTheCognitiveEnterprise();
+        bookService.indexTheLordOfTheRings();
     }
 }
