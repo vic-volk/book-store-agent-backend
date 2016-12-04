@@ -10,6 +10,7 @@ public class Book {
     private String id;
     private String name;
     private String author;
+    private String description;
     private String category;
     private String year;
     private String cover;
@@ -69,5 +70,13 @@ public class Book {
 
     public void setCost(String cost) {
         this.cost = cost;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

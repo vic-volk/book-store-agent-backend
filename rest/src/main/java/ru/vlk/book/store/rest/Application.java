@@ -14,6 +14,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
+import ru.vlk.book.store.rest.filters.CORSResponseFilter;
 
 import javax.ws.rs.core.UriBuilder;
 import java.net.InetSocketAddress;
@@ -28,6 +29,7 @@ public class Application extends ResourceConfig {
         packages("ru.vlk.book.store.rest.resources");
         property("contextConfigLocation", "classpath:META-INF/applicationContext.xml");
         register(JacksonFeature.class);
+        register(CORSResponseFilter.class);
     }
 
     @Bean
