@@ -1,5 +1,6 @@
 package ru.vlk.book.store.rest.service;
 
+import org.elasticsearch.index.query.QueryStringQueryBuilder;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Component;
@@ -14,8 +15,8 @@ public class BookService {
     @Inject
     private BookRepository bookRepository;
 
-    public Page<Book> listAll() {
-        return bookRepository.findAll(new PageRequest(0, 10));
+    public Page<Book> search(String query) {
+        return bookRepository.search(new QueryStringQueryBuilder(query), new PageRequest(0, 10));
     }
 
     public Book indexHobbit() {
