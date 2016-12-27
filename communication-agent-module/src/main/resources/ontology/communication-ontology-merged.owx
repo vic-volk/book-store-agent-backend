@@ -1,0 +1,345 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://webprotege.stanford.edu/project/ceEO40eL5JUiHQrUHclul"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://webprotege.stanford.edu/project/ceEO40eL5JUiHQrUHclul">
+    <Prefix name="" IRI="http://webprotege.stanford.edu/project/ceEO40eL5JUiHQrUHclul#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R9K3ZVRbEeoLjik8STQXnRi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vlk/ontologies/2016/11/untitled-ontology-4#SentenceConstruction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vlk/ontologies/2016/11/untitled-ontology-4#Word"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/Re3qRQZqFemLGi0dsop4YQ"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RRsHlKFfDxYQJxYoKRjdpg"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RjdaCEqTF99gHeJ5kxWTZu"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://webprotege.stanford.edu/R9ZK78AGk6GAT7u7WGrcd7L"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vlk/ontologies/2016/11/untitled-ontology-4#Sentence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RDRRLnxExcs9rDeWc98kBDP"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/R7d1qyxtatM9u1klAC14Dl1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vlk/ontologies/2016/11/lingvo-ontology#Subject"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/R7j3WnvznXtI37EBQL4WZSt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R84F6cYFAO6xrUxldPVxCzv"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://webprotege.stanford.edu/RBgUhdKtr4epZo58gNKGZYe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/R3PvBPZMuBB3yzkbmeXsv3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RD3FIhVevEFdPkcLI5Xb3IS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R8M8oweDiUWnLLZr6yYQlAA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vlk/ontologies/2016/11/untitled-ontology-4#Question"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RDDPff2Qs6coF61LigK9OnZ"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R9RxndXPDeglAuk6nSsWFP7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RuwSzmf4yvAlG8Dtlb44rW"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R0RuEuVX7eIQzKZtD0bpYj"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RMJ3pxJQzfCClyliSC5naA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R9Ihho57vF2QvU9ZCp00FeV"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vlk/ontologies/2016/11/lingvo-ontology#Statement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vlk/ontologies/2016/11/lingvo-ontology#SentencePart"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RBo5mHf5jUeJGQNbu73pAgb"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RDgcEoxSA7FgPoUgheqRsKL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R9QKQkG2cfp2XpPpp3pLpvC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R82oygQlwk4VHiCvFYnMD0M"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vlk/ontologies/2016/11/lingvo-ontology#Object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vlk/ontologies/2016/11/lingvo-ontology#Verb"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R0RuEuVX7eIQzKZtD0bpYj"/>
+        <Class IRI="http://webprotege.stanford.edu/R9K3ZVRbEeoLjik8STQXnRi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R82oygQlwk4VHiCvFYnMD0M"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R84F6cYFAO6xrUxldPVxCzv"/>
+        <Class IRI="http://webprotege.stanford.edu/R9RxndXPDeglAuk6nSsWFP7"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R8M8oweDiUWnLLZr6yYQlAA"/>
+        <Class IRI="http://webprotege.stanford.edu/RDgcEoxSA7FgPoUgheqRsKL"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R9Ihho57vF2QvU9ZCp00FeV"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R9K3ZVRbEeoLjik8STQXnRi"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R9QKQkG2cfp2XpPpp3pLpvC"/>
+        <Class IRI="http://webprotege.stanford.edu/R82oygQlwk4VHiCvFYnMD0M"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R9RxndXPDeglAuk6nSsWFP7"/>
+        <Class IRI="http://webprotege.stanford.edu/R9K3ZVRbEeoLjik8STQXnRi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RBo5mHf5jUeJGQNbu73pAgb"/>
+        <Class IRI="http://webprotege.stanford.edu/R82oygQlwk4VHiCvFYnMD0M"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RD3FIhVevEFdPkcLI5Xb3IS"/>
+        <Class IRI="http://webprotege.stanford.edu/RDgcEoxSA7FgPoUgheqRsKL"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RDRRLnxExcs9rDeWc98kBDP"/>
+        <Class IRI="http://webprotege.stanford.edu/R9RxndXPDeglAuk6nSsWFP7"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RDgcEoxSA7FgPoUgheqRsKL"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RMJ3pxJQzfCClyliSC5naA"/>
+        <Class IRI="http://webprotege.stanford.edu/RDgcEoxSA7FgPoUgheqRsKL"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/Re3qRQZqFemLGi0dsop4YQ"/>
+        <Class IRI="http://webprotege.stanford.edu/R9Ihho57vF2QvU9ZCp00FeV"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RjdaCEqTF99gHeJ5kxWTZu"/>
+        <Class IRI="http://webprotege.stanford.edu/R82oygQlwk4VHiCvFYnMD0M"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vlk/ontologies/2016/11/lingvo-ontology#Object"/>
+        <Class IRI="http://www.semanticweb.org/vlk/ontologies/2016/11/untitled-ontology-4#SentenceConstruction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vlk/ontologies/2016/11/lingvo-ontology#Statement"/>
+        <Class IRI="http://www.semanticweb.org/vlk/ontologies/2016/11/untitled-ontology-4#Sentence"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vlk/ontologies/2016/11/lingvo-ontology#Subject"/>
+        <Class IRI="http://www.semanticweb.org/vlk/ontologies/2016/11/untitled-ontology-4#SentenceConstruction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vlk/ontologies/2016/11/lingvo-ontology#Verb"/>
+        <Class IRI="http://www.semanticweb.org/vlk/ontologies/2016/11/untitled-ontology-4#SentenceConstruction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vlk/ontologies/2016/11/untitled-ontology-4#Question"/>
+        <Class IRI="http://www.semanticweb.org/vlk/ontologies/2016/11/untitled-ontology-4#Sentence"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/R8M8oweDiUWnLLZr6yYQlAA"/>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/R3PvBPZMuBB3yzkbmeXsv3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/R9QKQkG2cfp2XpPpp3pLpvC"/>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/R7d1qyxtatM9u1klAC14Dl1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/RjdaCEqTF99gHeJ5kxWTZu"/>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/R7j3WnvznXtI37EBQL4WZSt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/R8M8oweDiUWnLLZr6yYQlAA"/>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RDDPff2Qs6coF61LigK9OnZ"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/RBo5mHf5jUeJGQNbu73pAgb"/>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RRsHlKFfDxYQJxYoKRjdpg"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/RBo5mHf5jUeJGQNbu73pAgb"/>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RuwSzmf4yvAlG8Dtlb44rW"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://webprotege.stanford.edu/R9ZK78AGk6GAT7u7WGrcd7L"/>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/R3PvBPZMuBB3yzkbmeXsv3"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">do you have</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://webprotege.stanford.edu/R9ZK78AGk6GAT7u7WGrcd7L"/>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RDDPff2Qs6coF61LigK9OnZ"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is there any</Literal>
+    </DataPropertyAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R0RuEuVX7eIQzKZtD0bpYj</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">QuestionNotAboutBook</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R3PvBPZMuBB3yzkbmeXsv3</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">pattern-0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R7d1qyxtatM9u1klAC14Dl1</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">book</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R7j3WnvznXtI37EBQL4WZSt</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">you</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R82oygQlwk4VHiCvFYnMD0M</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SentenceConstruction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R84F6cYFAO6xrUxldPVxCzv</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ConcreteQuestion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R8M8oweDiUWnLLZr6yYQlAA</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">QuestionPattern</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R9Ihho57vF2QvU9ZCp00FeV</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Reaction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R9K3ZVRbEeoLjik8STQXnRi</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Question</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R9QKQkG2cfp2XpPpp3pLpvC</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Addition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R9RxndXPDeglAuk6nSsWFP7</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">QuestionAboutBook</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R9ZK78AGk6GAT7u7WGrcd7L</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RBgUhdKtr4epZo58gNKGZYe</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">asd</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RBo5mHf5jUeJGQNbu73pAgb</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">VerbConstruction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RD3FIhVevEFdPkcLI5Xb3IS</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ConcreteQuestionPattern</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RDDPff2Qs6coF61LigK9OnZ</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">pattern-1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RDRRLnxExcs9rDeWc98kBDP</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CategoryQuestion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RDgcEoxSA7FgPoUgheqRsKL</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pattern</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RMJ3pxJQzfCClyliSC5naA</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CategoryQuestionPattern</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RRsHlKFfDxYQJxYoKRjdpg</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">do</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/Re3qRQZqFemLGi0dsop4YQ</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ReactionOnQuestionNotAboutBook</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RjdaCEqTF99gHeJ5kxWTZu</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SubjectConstruction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RuwSzmf4yvAlG8Dtlb44rW</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">have</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
