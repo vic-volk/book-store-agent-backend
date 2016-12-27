@@ -28,7 +28,9 @@ public class OntologyCategoryResolver implements CategoryResolver {
 
     @Override
     public QuestionType resolveQuestionType(String question) {
-        return null;
+        Set<String> categoryQuestionWords = agentMemoryService.getCategoryQuestionWords();
+        return categoryQuestionWords.stream().anyMatch(question::contains)
+                ? QuestionType.Category : QuestionType.Concrete;
     }
 
     @Override

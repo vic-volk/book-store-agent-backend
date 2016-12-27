@@ -62,6 +62,9 @@
         <DataProperty IRI="http://webprotege.stanford.edu/RBgUhdKtr4epZo58gNKGZYe"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="http://webprotege.stanford.edu/RViprNLtKQW3MG2mkFesTi"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="http://webprotege.stanford.edu/R3PvBPZMuBB3yzkbmeXsv3"/>
     </Declaration>
     <Declaration>
@@ -69,6 +72,15 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://webprotege.stanford.edu/R7j3WnvznXtI37EBQL4WZSt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RBiFPaleaSJ5mHqjjRIP6F4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RCBl9UglNkRpxB8QZ2lqfNm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RCi69XS5WkaJvkW69R88a8m"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://webprotege.stanford.edu/RDDPff2Qs6coF61LigK9OnZ"/>
@@ -152,6 +164,18 @@
         <NamedIndividual IRI="http://webprotege.stanford.edu/R7j3WnvznXtI37EBQL4WZSt"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/RMJ3pxJQzfCClyliSC5naA"/>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RBiFPaleaSJ5mHqjjRIP6F4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/RMJ3pxJQzfCClyliSC5naA"/>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RCBl9UglNkRpxB8QZ2lqfNm"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/RMJ3pxJQzfCClyliSC5naA"/>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RCi69XS5WkaJvkW69R88a8m"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/R8M8oweDiUWnLLZr6yYQlAA"/>
         <NamedIndividual IRI="http://webprotege.stanford.edu/RDDPff2Qs6coF61LigK9OnZ"/>
     </ClassAssertion>
@@ -167,6 +191,21 @@
         <DataProperty IRI="http://webprotege.stanford.edu/R9ZK78AGk6GAT7u7WGrcd7L"/>
         <NamedIndividual IRI="http://webprotege.stanford.edu/R3PvBPZMuBB3yzkbmeXsv3"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">do you have</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://webprotege.stanford.edu/RViprNLtKQW3MG2mkFesTi"/>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RBiFPaleaSJ5mHqjjRIP6F4"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">sphere</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://webprotege.stanford.edu/R9ZK78AGk6GAT7u7WGrcd7L"/>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RCBl9UglNkRpxB8QZ2lqfNm"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">something</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://webprotege.stanford.edu/R9ZK78AGk6GAT7u7WGrcd7L"/>
+        <NamedIndividual IRI="http://webprotege.stanford.edu/RCi69XS5WkaJvkW69R88a8m"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">about</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://webprotege.stanford.edu/R9ZK78AGk6GAT7u7WGrcd7L"/>
@@ -240,8 +279,23 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RBiFPaleaSJ5mHqjjRIP6F4</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">pattern-3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://webprotege.stanford.edu/RBo5mHf5jUeJGQNbu73pAgb</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">VerbConstruction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RCBl9UglNkRpxB8QZ2lqfNm</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">pattern-1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RCi69XS5WkaJvkW69R88a8m</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">pattern-2</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -272,6 +326,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://webprotege.stanford.edu/RRsHlKFfDxYQJxYoKRjdpg</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">do</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RViprNLtKQW3MG2mkFesTi</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">vaule</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
