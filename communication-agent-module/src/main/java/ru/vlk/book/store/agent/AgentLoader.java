@@ -1,4 +1,4 @@
-package ru.vlk.book.store.agent.test;
+package ru.vlk.book.store.agent;
 
 import org.springframework.stereotype.Component;
 

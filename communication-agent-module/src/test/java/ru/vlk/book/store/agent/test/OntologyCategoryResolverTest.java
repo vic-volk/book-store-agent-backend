@@ -6,8 +6,8 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
 import org.springframework.stereotype.Component;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import ru.vlk.book.store.agent.test.lingvistic.CategoryResolver;
-import ru.vlk.book.store.agent.test.model.QuestionType;
+import ru.vlk.book.store.agent.model.QuestionType;
+import ru.vlk.book.store.agent.lingvistic.CategoryResolver;
 
 import javax.inject.Inject;
 

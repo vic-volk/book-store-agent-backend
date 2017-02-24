@@ -1,7 +1,7 @@
-package ru.vlk.book.store.agent.test.lingvistic;
+package ru.vlk.book.store.agent.lingvistic;
 
 import org.springframework.stereotype.Component;
-import ru.vlk.book.store.agent.test.model.QuestionType;
+import ru.vlk.book.store.agent.model.QuestionType;
 
 @Component
 public interface CategoryResolver {

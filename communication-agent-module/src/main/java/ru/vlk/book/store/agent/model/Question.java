@@ -1,4 +1,4 @@
-package ru.vlk.book.store.agent.test.model;
+package ru.vlk.book.store.agent.model;
 
 public class Question {
 

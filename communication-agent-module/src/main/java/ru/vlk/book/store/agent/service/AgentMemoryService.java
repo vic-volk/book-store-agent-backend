@@ -1,4 +1,4 @@
-package ru.vlk.book.store.agent.test.service;
+package ru.vlk.book.store.agent.service;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;
@@ -6,7 +6,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.stereotype.Component;
-import ru.vlk.book.store.agent.test.exception.AgentException;
+import ru.vlk.book.store.agent.exception.AgentException;
+import ru.vlk.book.store.agent.util.OWLUtils;
 import ru.vlk.book.store.elastic.model.Book;
 
 import javax.annotation.PostConstruct;
@@ -16,13 +17,11 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Set;
 
-import static ru.vlk.book.store.agent.test.util.OWLUtils.*;
-
 @Component
 public class AgentMemoryService {
 
     @Value("${ontology.file.location}")
-    private String ontologyFilePath;
+    private String ontologyFileLocation;
 
     private Set<String> questionPatterns;
 
@@ -58,7 +57,7 @@ public class AgentMemoryService {
 
     private OWLOntology loadOntology() throws AgentException {
         OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
-        URL url = this.getClass().getClassLoader().getResource(ontologyFilePath);
+        URL url = this.getClass().getClassLoader().getResource(ontologyFileLocation);
         try {
             if (url == null) {
                 throw new AgentException("Ontology file not found.");
@@ -81,9 +80,13 @@ public class AgentMemoryService {
     }
 
     private Set<String> getValuesOfClassIndividuals(String name, OWLOntology ontology) {
-        OWLClass owlClass = getOWLClass(name, ontology);
-        Set<OWLIndividual> individuals = getClassIndividuals(owlClass, ontology);
-        return getIndividualValues(individuals, ontology);
+        OWLClass owlClass = OWLUtils.getOWLClass(name, ontology);
+        Set<OWLIndividual> individuals = OWLUtils.getClassIndividuals(owlClass, ontology);
+        return OWLUtils.getIndividualValues(individuals, ontology);
+    }
+
+    public OWLOntology getOntology() {
+        return ontology;
     }
 
     public OWLOntology getOntology() {
