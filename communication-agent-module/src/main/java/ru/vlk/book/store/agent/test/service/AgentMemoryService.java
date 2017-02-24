@@ -85,4 +85,8 @@ public class AgentMemoryService {
         Set<OWLIndividual> individuals = getClassIndividuals(owlClass, ontology);
         return getIndividualValues(individuals, ontology);
     }
+
+    public OWLOntology getOntology() {
+        return ontology;
+    }
 }
