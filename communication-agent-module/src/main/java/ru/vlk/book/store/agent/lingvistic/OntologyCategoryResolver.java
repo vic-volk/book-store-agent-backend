@@ -1,8 +1,8 @@
-package ru.vlk.book.store.agent.test.lingvistic;
+package ru.vlk.book.store.agent.lingvistic;
 
 import org.springframework.stereotype.Component;
-import ru.vlk.book.store.agent.test.model.QuestionType;
-import ru.vlk.book.store.agent.test.service.AgentMemoryService;
+import ru.vlk.book.store.agent.model.QuestionType;
+import ru.vlk.book.store.agent.service.AgentMemoryService;
 
 import javax.inject.Inject;
 import java.util.ArrayList;

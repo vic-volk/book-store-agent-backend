@@ -1,6 +1,5 @@
 package ru.vlk.book.store.agent.test;
 
-import com.google.inject.Inject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.semanticweb.owlapi.model.OWLOntology;
@@ -8,11 +7,13 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
 import org.springframework.stereotype.Component;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import ru.vlk.book.store.agent.test.service.AgentMemoryService;
+import ru.vlk.book.store.agent.service.AgentMemoryService;
+
+import javax.inject.Inject;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @Component
-@ContextConfiguration("classpath*:META-INF/test-applicationContext-communication-agent.xml")
+@ContextConfiguration(classes = TestAnnotationConfig.class)
 @EnableElasticsearchRepositories("ru.vlk.book.store.elastic")
 public class AgentMemoryServiceTest {
 
@@ -22,5 +23,6 @@ public class AgentMemoryServiceTest {
     @Test
     public void testOWL() {
         OWLOntology owlOntology = agentMemoryService.getOntology();
+
     }
 }

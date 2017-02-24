@@ -1,11 +1,10 @@
-package ru.vlk.book.store.agent.test.lingvistic;
+package ru.vlk.book.store.agent.lingvistic;
 
 import org.springframework.stereotype.Component;
-import ru.vlk.book.store.agent.test.service.AgentMemoryService;
+import ru.vlk.book.store.agent.service.AgentMemoryService;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
-import java.util.Iterator;
 import java.util.Set;
 import java.util.stream.Collectors;
 

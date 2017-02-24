@@ -1,4 +1,4 @@
-package ru.vlk.book.store.agent.test.util;
+package ru.vlk.book.store.agent.util;
 
 import com.google.common.collect.Multimap;
 import org.semanticweb.owlapi.model.*;

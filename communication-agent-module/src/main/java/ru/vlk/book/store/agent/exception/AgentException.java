@@ -1,4 +1,4 @@
-package ru.vlk.book.store.agent.test.exception;
+package ru.vlk.book.store.agent.exception;
 
 public class AgentException extends Exception {
 

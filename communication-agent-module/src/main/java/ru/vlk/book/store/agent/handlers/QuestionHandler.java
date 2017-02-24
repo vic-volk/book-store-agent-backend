@@ -1,14 +1,14 @@
-package ru.vlk.book.store.agent.test.handlers;
+package ru.vlk.book.store.agent.handlers;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Component;
-import ru.vlk.book.store.agent.test.exception.AgentException;
-import ru.vlk.book.store.agent.test.lingvistic.CategoryResolver;
-import ru.vlk.book.store.agent.test.lingvistic.QuestionConverter;
-import ru.vlk.book.store.agent.test.model.QuestionType;
-import ru.vlk.book.store.agent.test.service.AgentMemoryService;
+import ru.vlk.book.store.agent.model.QuestionType;
+import ru.vlk.book.store.agent.exception.AgentException;
+import ru.vlk.book.store.agent.lingvistic.CategoryResolver;
+import ru.vlk.book.store.agent.lingvistic.QuestionConverter;
+import ru.vlk.book.store.agent.service.AgentMemoryService;
 import ru.vlk.book.store.elastic.model.Book;
 import ru.vlk.book.store.elastic.repository.BookRepository;
 
