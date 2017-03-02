@@ -48,6 +48,12 @@ public class AgentMemoryServiceTest {
         AddAxiom addAxiom = new AddAxiom(o, axiom);
         owlOntologyManager.applyChange(addAxiom);
 
+        OWLIndividual owlIndividual1 = owlDataFactory.getOWLNamedIndividual(IRI.create(iri + "#C"));
+        OWLIndividual owlIndividual2 = owlDataFactory.getOWLNamedIndividual(IRI.create(iri + "#E"));
+        OWLObjectPropertyExpression expression = owlDataFactory.getOWLObjectProperty(IRI.create(iri + "#F"));
+        axiom = owlDataFactory.getOWLObjectPropertyAssertionAxiom(expression, owlIndividual1, owlIndividual2);
+
+        addAxiom = new AddAxiom(o, axiom);
 
         owlOntologyManager.saveOntology(o);
     }
