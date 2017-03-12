@@ -88,8 +88,4 @@ public class AgentMemoryService {
     public OWLOntology getOntology() {
         return ontology;
     }
-
-    public OWLOntology getOntology() {
-        return ontology;
-    }
 }
