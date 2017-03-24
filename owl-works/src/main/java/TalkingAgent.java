@@ -1,9 +1,16 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class TalkingAgent implements Runnable {
 
-    private static List<String> messageBox;
+    private List<String> messageBox;
+    private List<String> internalMemory;
     private int sleepTimeout = 2000;
+
+    public TalkingAgent(List<String> messageBox) {
+        this.messageBox = messageBox;
+        this.internalMemory = new ArrayList<>();
+    }
 
     @Override
     public void run() {
@@ -15,9 +22,11 @@ public class TalkingAgent implements Runnable {
     }
 
     private void mainCycle() throws InterruptedException {
-        Thread.sleep(sleepTimeout);
-        if(isMessageBoxNotEmpty()) {
-            readAndAnswer();
+        while (true) {
+            Thread.sleep(sleepTimeout);
+            if(isMessageBoxNotEmpty()) {
+                readAndAnswer();
+            }
         }
     }
 
@@ -26,6 +35,14 @@ public class TalkingAgent implements Runnable {
     }
 
     private void readAndAnswer() {
-        System.out.println("Hi!");
+        synchronized (messageBox) {
+            internalMemory.addAll(messageBox);
+            messageBox.clear();
+            System.out.println(handleMessage(internalMemory));
+        }
+    }
+
+    private String handleMessage(List<String> message) {
+        return "Hi!";
     }
 }

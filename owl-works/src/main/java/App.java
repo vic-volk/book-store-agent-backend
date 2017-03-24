@@ -1,12 +1,14 @@
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class App {
 
     public static void main(String[] args) {
-        Thread t = new Thread(new TalkingAgent());
-        t.start();
+        List<String> messageBox = new ArrayList<>();
 
-        Scanner s = new Scanner(System.in);
-        System.out.println(s.next());
+        Thread t1 = new Thread(new TalkingAgent(messageBox));
+        Thread t2 = new Thread(new UserClient(messageBox));
+        t1.start();
+        t2.start();
     }
 }
