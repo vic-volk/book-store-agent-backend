@@ -1,9 +1,14 @@
 package ru.vlk.book.store.elastic.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document;
+
+@Document(indexName = "users", type = "user")
 public class User {
 
+    @Id
+    private String id;
     private String name;
-    private String guid;
     private String lastname;
     private String hash;
     private String email;
@@ -16,12 +21,12 @@ public class User {
         this.name = name;
     }
 
-    public String getGuid() {
-        return guid;
+    public String getId() {
+        return id;
     }
 
-    public void setGuid(String guid) {
-        this.guid = guid;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getLastname() {

@@ -1,9 +1,15 @@
 package ru.vlk.book.store.elastic.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document;
+
 import java.util.Date;
 
+@Document(indexName = "notices", type = "notice")
 public class Notice {
 
+    @Id
+    private String id;
     private Date date;
     private String heading;
     private String text;
