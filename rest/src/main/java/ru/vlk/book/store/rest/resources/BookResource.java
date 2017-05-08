@@ -8,6 +8,7 @@ import ru.vlk.book.store.rest.service.BookService;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
+import java.util.List;
 
 @Path("/book")
 @Component
@@ -18,11 +19,11 @@ public class BookResource {
 
     @GET
     @Produces("application/json")
-    public Page<Book> getBooks(@QueryParam("q") String queryTerm) {
+    public List<Book> getBooks(@QueryParam("q") String queryTerm) {
         if(StringUtils.isBlank(queryTerm)) {
             queryTerm = "*:*";
         }
-        return bookService.search(queryTerm);
+        return bookService.search(queryTerm).getContent();
     }
 
     @POST

@@ -5,10 +5,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	   					   http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="ru.vlk.book.store.rest"/>
+    <context:component-scan base-package="ru.vlk.book.store.service"/>
 
-    <import resource="applicationContext-communication-agent.xml"/>
     <import resource="applicationContext-elasticsearch.xml"/>
-    <import resource="applicationContext-service.xml"/>
 
 </beans>

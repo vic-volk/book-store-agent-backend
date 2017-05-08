@@ -15,6 +15,7 @@ public class Book {
     private String year;
     private String cover;
     private String cost;
+    private String type;
 
     public String getId() {
         return id;
@@ -78,5 +79,13 @@ public class Book {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
