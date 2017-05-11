@@ -8,8 +8,6 @@ import org.springframework.stereotype.Component;
 import ru.vlk.book.store.elastic.model.Notice;
 import ru.vlk.book.store.elastic.repository.NoticeRepository;
 
-import java.util.List;
-
 @Component
 public class NoticeService {
 

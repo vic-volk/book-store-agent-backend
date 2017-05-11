@@ -13,6 +13,11 @@ public class User {
     private String hash;
     private String email;
 
+    public User(String name, String hash) {
+        this.name = name;
+        this.hash = hash;
+    }
+
     public String getName() {
         return name;
     }
